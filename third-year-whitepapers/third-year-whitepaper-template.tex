@@ -1,0 +1,276 @@
+\documentclass[12pt,a4paper]{article} 
+
+%% -- Packages to use -- %%
+	\usepackage{authblk}
+	\usepackage{graphicx}
+	\usepackage[toc,page]{appendix}
+	\usepackage{hyperref}
+	\usepackage[backend=bibtex, style=authoryear]{biblatex}
+	\makeatletter
+	\def\blx@maxline{77}
+	\makeatother
+	\usepackage[nottoc,numbib]{tocbibind}
+%% -- Define path to .bib file -- %%
+	\bibliography{abertay-whitepaper-template}
+	\usepackage{float}
+	\usepackage{listings}
+	\usepackage{enumitem}
+
+
+%% -- Generate the glossary -- %%
+	\usepackage[acronym,nomain,nonumberlist]{glossaries}
+	\makeglossaries
+	
+%% -- Bibliography -- %%
+
+	
+
+%% -- Acronym definitions {label}{abbreviation}{full} -- %%
+	\newacronym{vm}{VM}{Virtual Machine}
+	\newacronym{tls}{TLS}{Transport Layer Security}
+	\newacronym{2fa}{2FA}{Two Factor Authentication}
+	\newacronym{http}{HTTP}{Hypertext Transport Protocol}
+	\newacronym{https}{HTTPS}{Hypertext Transport Protocol Secure}
+	\newacronym{api}{API}{Application Programming Interface}
+	\newacronym{ms}{MS}{Microsoft}
+	\newacronym{sql}{SQL}{Structured Query Language}
+	\newacronym{git}{Git}{Free and open source distributed version control system}
+	\newacronym{aes}{AES}{ Advanced Encryption Standard}
+	\newacronym{hsts}{HSTS}{HTTP Strict Transport Security}
+	\newacronym{dip}{DLP}{Data Loss Prevention}
+	\newacronym{ui}{UI}{User Interface}
+	\newacronym{paas}{PaaS}{Platform as a Service}
+	\newacronym{aws}{AWS}{Amazon Web Services}
+	\newacronym{s3}{S3}{Amazon Simple Storage Service}
+	
+	
+	
+	
+%% -- Set Title and Author Details -- %%
+	\title{This Is A Title}
+	\author{M. Hayden}
+	\affil{BSc Ethical Hacking\\
+		Abertay University\\
+		Dundee, United Kingdom\\
+		StudentNumber@abertay.ac.uk}			
+	\date{Date}
+
+%% -- Beginning the main document -- %%
+\begin{document}
+
+%% -- For the title, abstract and table of contents use single column -- %%
+	\pagenumbering{gobble}
+
+%% -- Add the uni logo -- %%
+	\begin{figure}
+		\includegraphics[width=\linewidth]{img/unilogo}
+	\end{figure}
+
+%% -- Insert the title here -- %%
+	\maketitle
+
+% -- Abstract -- %
+	\newpage				
+		\begin{abstract}
+		 A Bill Make provision about the interception of communications, equipment
+interference and the acquisition and retention of communications data, bulk
+personal datasets and other information; to make provision about the
+treatment of material held as a result of such interception, equipment
+interference or acquisition or retention; to establish the Investigatory Powers
+Commissioner and other Judicial Commissioners and make provision about
+them and other oversight arrangements; to make further provision about
+investigatory powers and national security; to amend sections 3 and 5 of the
+Intelligence Services Act 1994; and for connected purposes.			
+			
+%% -- Leave a blank line to start a new paragraph -- %%					
+		\end{abstract}
+
+%% -- Table Of Contents -- %%
+	\newpage
+	\tableofcontents
+	\newpage
+				
+%% -- Start Page Numbers -- %%
+%% -- arabic = 1,2,3 -- %%	
+		
+	\pagenumbering{arabic}
+
+%% -- Introduction -- %%
+	\section{Introduction}
+		 Some text used to fill space taken from the Investigatory Powers Bill (Parliament, 2016).
+		
+		More information about LaTeX \& Tex can bout on the Hack Soc wiki \footnote{https://hacksoc.co.uk/latex}.
+			
+%% -- Layout -- %%		
+		\subsection{Layout}
+%% -- Colin White Paper CMP319 2016/17 -- %%
+			\subsubsection{Colin White Paper CMP319 2016/17}
+				As a suggestion, your report should include:
+				\begin{enumerate}
+					\item{Introduction}
+						\begin{enumerate}
+							\item{Introduction to the report}
+							\item{Aim of your work}
+							\item{An overview of your methodology (i.e. each step that you have conducted to penetrate the network and the tools that you have used).}
+						\end{enumerate}
+					\item{Procedure and Results}
+						\begin{enumerate}
+							\item{This section should succinctly describe your practical work and findings}
+							\item{Any results should be presented in an easy to read format.}
+							\item{Include any relevant screenshots. These should be clearly labelled and referenced within the text of your report.}
+						\end{enumerate}
+					\item{References}
+						\begin{enumerate}
+							\item{References should be cited according the university?s referencing criteria (http://www.abertay.ac.uk/media/Referencing.pdf)} 
+							\item{You should cite appropriate references throughout your report.}
+						\end{enumerate}
+					\item{Appendices}
+						\begin{enumerate}
+							\item{Any large volume of information should be included in Appendices.}
+						\end{enumerate}
+				\end{enumerate}
+
+%% -- David White Paper One CMP314 2016/17 -- %% 
+			\subsubsection{David White Paper One CMP314 2016/17}
+				The following structure is suggested:
+				\begin{enumerate}
+					\item{Introduction [15\%]}
+						\begin{enumerate}
+							\item{Abstract}
+							\item{Introduction}
+							\item{Overview of chosen area}
+							\item{Your Objectives}
+						\end{enumerate}
+					\item{Procedure and Results [20\%]}
+						\begin{enumerate}
+							\item{An explanation of what you did and what you found}
+							\item{A discussion of the practical steps included in your investigation}
+							\item{The results should be easily followed and understood and should, where appropriate, include any relevant screenshots}
+						\end{enumerate}
+					\item{Discussion [20\%]}
+						\begin{enumerate}
+							\item{Critical evaluation of the results} 
+							\item{Description of any further investigative work that could be performed in future research}
+							\item{Any countermeasures.}
+						\end{enumerate}
+					\item{Conclusions [10\%]}
+					\item {References \& Bibliography [10\%]}
+				\end{enumerate}	
+				
+	\newpage
+
+%% -- Background -- %%
+		\subsection{Background}
+
+%% -- Overview -- %%			
+		\subsection{Overview}
+		
+%% -- Technology One -- %%
+			\subsubsection{LaTeX}
+			"LaTeX, which is pronounced 'Lah-tech' or 'Lay-tech', is a document preparation system for high-quality typesetting. It is most often used for medium-to-large technical or scientific documents but it can be used for almost any form of publishing."\footnote{https://www.latex-project.org/about/}
+			
+%% -- Technology Two -- %%
+			\subsubsection{Technology Two}
+						
+	\newpage	
+
+%% -- Aims & Objectives  -- %%
+
+	\section{Aims \& Objectives}
+				
+		\subsection{Aims}
+			\begin{itemize}
+				\item{Enslave Humanity}
+				\item{Defeat C}
+			\end{itemize}
+				
+		\subsection{Objectives}
+			\begin{itemize}
+				\item{Build AI}
+					\begin{itemize}
+						\item{Write AI framework}
+						\item{Train it on cat pics}
+						\item{Deploy TLS}
+					\end{itemize}
+					\item{Setup Windows 10 Virtual Machine in VMWare}
+					\item{Setup Linux on Windows}
+				\end{itemize}
+
+	\clearpage
+				
+%% -- Procedure  -- %%
+	\section{Procedure}
+	
+	\clearpage
+			
+%% -- Discussion & Comparison -- %% 
+	\section{Discussion \& Comparison}									
+									
+%% -- Subsection One --  %%
+		\subsection{Cats Are Awesome}
+																					
+	\clearpage
+
+%% -- Conclusion -- %%											
+	\section{Conclusion}
+	
+	\clearpage
+	
+%% -- Bliography -- %%
+	\addcontentsline{toc}{section}{References}
+	\printbibliography
+	\nocite{*}
+	
+	\clearpage
+
+%% -- Glossarie -- %% 
+	\glsaddall
+	\printglossaries
+	\addcontentsline{toc}{section}{Glossaire}
+	
+	\clearpage
+	
+%% -- Appendix -- %%
+	\begin{appendices}
+	
+		\section{Definition of "interception" etc.}
+		Interception in relation to telecommunication systems
+	
+		\begin{enumerate}
+			\item{For the purposes of this Act, a person intercepts a communication in the course of its transmission by means of a telecommunication system if, and only if - }
+				\begin{enumerate}
+					\item{the person does a relevant act in relation to the system, and}
+					\item{the effect of the relevant act is to make any content of the communication available, at a relevant time, to a person who is not the sender or intended recipient of the communication.}
+				\end{enumerate}
+			For the meaning of "content" in relation to a communication, see section 233(6).
+			\item{In this section ?relevant act?, in relation to a telecommunication system, means -}
+				
+				\begin{enumerate}
+					\item{modifying, or interfering with, the system or its operation;}
+					\item{monitoring transmissions made by means of the system;}
+					\item{monitoring transmissions made by wireless telegraphy to or from apparatus that is part of the system.}
+				\end{enumerate}
+
+			\item{For the purposes of this section references to modifying a telecommunication system include references to attaching any apparatus to, or otherwise modifying or interfering with -}
+				
+				\begin{enumerate}
+					\item{any part of the system, or}
+					\item{any wireless telegraphy apparatus used for making transmissions to or from apparatus that is part of the system.}
+				\end{enumerate}
+				
+			\item{In this section ?relevant time?, in relation to a communication transmitted by means of a telecommunication system, means -}
+				
+				\begin{enumerate}
+					\item{any time while the communication is being transmitted, and}
+					\item{any time when the communication is stored in or by the system (whether before or after its transmission).}
+				\end{enumerate}
+				
+			\item{For the purposes of this section, the cases in which any content of a communication is to be taken to be made available to a person at a relevant time include any case in which any of the communication is diverted or recorded at a relevant time so as to make any content of the communication available to a person after that time.}		
+		\end{enumerate}
+	
+	\end{appendices}	
+	
+%% -- END OF DOCUMENT -- %% 
+\end{document}
+
+											%% - 0 - %%
